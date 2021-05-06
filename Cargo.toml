@@ -4,6 +4,14 @@ version = "0.1.0"
 authors = ["Utkarsh Kukreti <utkarshkukreti@gmail.com>"]
 edition = "2018"
 
+description = "A library to work with WordNet data."
+license = "MIT/Apache-2.0"
+documentation = "https://docs.rs/wn"
+homepage = "https://github.com/utkarshkukreti/wn.rs"
+repository = "https://github.com/utkarshkukreti/wn.rs"
+keywords = ["wordnet", "nlp", "dictionary", "language", "lmf"]
+categories = ["text-processing", "science", "api-bindings"]
+
 [dependencies]
 quick-xml = { version = "0.22", features = ["serialize"] }
 serde = { version = "1", features = ["derive"] }
