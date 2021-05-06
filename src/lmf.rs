@@ -138,6 +138,13 @@ pub enum Error {
 
 pub fn from_file(path: impl AsRef<std::path::Path>) -> Result<Root, Error> {
     let file = std::fs::File::open(path)?;
-    let reader = std::io::BufReader::new(file);
+    from_reader(std::io::BufReader::new(file))
+}
+
+pub fn from_str(str: &str) -> Result<Root, Error> {
+    Ok(quick_xml::de::from_str(str)?)
+}
+
+pub fn from_reader(reader: impl std::io::BufRead) -> Result<Root, Error> {
     Ok(quick_xml::de::from_reader(reader)?)
 }
