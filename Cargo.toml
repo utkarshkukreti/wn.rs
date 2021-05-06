@@ -8,3 +8,6 @@ edition = "2018"
 quick-xml = { version = "0.22", features = ["serialize"] }
 serde = { version = "1", features = ["derive"] }
 thiserror = "1"
+
+[dev-dependencies]
+expect-test = "1"
