@@ -8,7 +8,7 @@ fn t() {
 
     assert_eq!(root.lexicons.len(), 1);
 
-    let lexicon = root.lexicons.remove(0);
+    let mut lexicon = root.lexicons.remove(0);
 
     assert_eq!(lexicon.id, "ewn");
     assert_eq!(lexicon.label, "English WordNet");
@@ -31,131 +31,85 @@ fn t() {
         expect.assert_debug_eq(&t)
     }
 
+    lexicon.lexical_entries.sort_by(|a, b| a.id.cmp(&b.id));
+    lexicon.synsets.sort_by(|a, b| a.id.cmp(&b.id));
+
     check(
         &lexicon.lexical_entries[..5],
         expect![[r#"
             [
                 LexicalEntry {
-                    id: "ewn-fritter_away-v",
+                    id: "ewn--ap-hood-n",
                     lemma: Lemma {
-                        written_form: "fritter away",
-                        part_of_speech: Verb,
+                        written_form: "\'hood",
+                        part_of_speech: Noun,
                     },
                     senses: [
                         Sense {
-                            id: "ewn-fritter_away-v-01198337-05",
-                            synset: "ewn-01198337-v",
+                            id: "ewn--ap-hood-n-08242255-02",
+                            synset: "ewn-08242255-n",
                             relations: [],
                         },
                     ],
                 },
                 LexicalEntry {
-                    id: "ewn-patronage-v",
+                    id: "ewn--ap-s_Gravenhage-n",
                     lemma: Lemma {
-                        written_form: "patronage",
-                        part_of_speech: Verb,
+                        written_form: "\'s Gravenhage",
+                        part_of_speech: Noun,
                     },
                     senses: [
                         Sense {
-                            id: "ewn-patronage-v-01187544-01",
-                            synset: "ewn-01187544-v",
-                            relations: [
-                                SenseRelation {
-                                    rel_type: Derivation,
-                                    target: "ewn-patronage-n-01156356-01",
-                                },
-                            ],
-                        },
-                        Sense {
-                            id: "ewn-patronage-v-00910574-03",
-                            synset: "ewn-00910574-v",
-                            relations: [
-                                SenseRelation {
-                                    rel_type: Derivation,
-                                    target: "ewn-patronage-n-01098359-02",
-                                },
-                                SenseRelation {
-                                    rel_type: Derivation,
-                                    target: "ewn-patronage-n-08418511-02",
-                                },
-                            ],
-                        },
-                    ],
-                },
-                LexicalEntry {
-                    id: "ewn-gluttonise-v",
-                    lemma: Lemma {
-                        written_form: "gluttonise",
-                        part_of_speech: Verb,
-                    },
-                    senses: [
-                        Sense {
-                            id: "ewn-gluttonise-v-01171347-02",
-                            synset: "ewn-01171347-v",
+                            id: "ewn--ap-s_Gravenhage-n-08970180-02",
+                            synset: "ewn-08970180-n",
                             relations: [],
                         },
                     ],
                 },
                 LexicalEntry {
-                    id: "ewn-lap-v",
+                    id: "ewn--ap-tween-r",
                     lemma: Lemma {
-                        written_form: "lap",
-                        part_of_speech: Verb,
+                        written_form: "\'tween",
+                        part_of_speech: Adverb,
                     },
                     senses: [
                         Sense {
-                            id: "ewn-lap-v-02698039-01",
-                            synset: "ewn-02698039-v",
-                            relations: [
-                                SenseRelation {
-                                    rel_type: Derivation,
-                                    target: "ewn-lap-n-03647020-01",
-                                },
-                            ],
-                        },
-                        Sense {
-                            id: "ewn-lap-v-01434809-02",
-                            synset: "ewn-01434809-v",
-                            relations: [
-                                SenseRelation {
-                                    rel_type: Derivation,
-                                    target: "ewn-lap-n-00151411-02",
-                                },
-                            ],
-                        },
-                        Sense {
-                            id: "ewn-lap-v-02192644-01",
-                            synset: "ewn-02192644-v",
-                            relations: [],
-                        },
-                        Sense {
-                            id: "ewn-lap-v-01173263-01",
-                            synset: "ewn-01173263-v",
-                            relations: [
-                                SenseRelation {
-                                    rel_type: Derivation,
-                                    target: "ewn-lap-n-00151411-02",
-                                },
-                            ],
-                        },
-                        Sense {
-                            id: "ewn-lap-v-00218002-02",
-                            synset: "ewn-00218002-v",
+                            id: "ewn--ap-tween-r-00252367-02",
+                            synset: "ewn-00252367-r",
                             relations: [],
                         },
                     ],
                 },
                 LexicalEntry {
-                    id: "ewn-sate-v",
+                    id: "ewn--ap-tween_decks-r",
                     lemma: Lemma {
-                        written_form: "sate",
-                        part_of_speech: Verb,
+                        written_form: "\'tween decks",
+                        part_of_speech: Adverb,
                     },
                     senses: [
                         Sense {
-                            id: "ewn-sate-v-01196254-02",
-                            synset: "ewn-01196254-v",
+                            id: "ewn--ap-tween_decks-r-00500491-02",
+                            synset: "ewn-00500491-r",
                             relations: [],
+                        },
+                    ],
+                },
+                LexicalEntry {
+                    id: "ewn-.22-caliber-a",
+                    lemma: Lemma {
+                        written_form: ".22-caliber",
+                        part_of_speech: Adjective,
+                    },
+                    senses: [
+                        Sense {
+                            id: "ewn-.22-caliber-a-03157978-02",
+                            synset: "ewn-03157978-a",
+                            relations: [
+                                SenseRelation {
+                                    rel_type: Pertainym,
+                                    target: "ewn-caliber-n-05110583-03",
+                                },
+                            ],
                         },
                     ],
                 },
@@ -168,71 +122,123 @@ fn t() {
         expect![[r#"
             [
                 LexicalEntry {
-                    id: "ewn-overclock-v",
+                    id: "ewn-zymolysis-n",
                     lemma: Lemma {
-                        written_form: "overclock",
-                        part_of_speech: Verb,
+                        written_form: "zymolysis",
+                        part_of_speech: Noun,
                     },
                     senses: [
                         Sense {
-                            id: "ewn-overclock-v-91001651-01",
-                            synset: "ewn-91001651-v",
-                            relations: [],
+                            id: "ewn-zymolysis-n-13596636-02",
+                            synset: "ewn-13596636-n",
+                            relations: [
+                                SenseRelation {
+                                    rel_type: Derivation,
+                                    target: "ewn-zymolytic-a-03011955-02",
+                                },
+                            ],
                         },
                     ],
                 },
                 LexicalEntry {
-                    id: "ewn-photobomb-v",
+                    id: "ewn-zymolytic-a",
                     lemma: Lemma {
-                        written_form: "photobomb",
-                        part_of_speech: Verb,
+                        written_form: "zymolytic",
+                        part_of_speech: Adjective,
                     },
                     senses: [
                         Sense {
-                            id: "ewn-photobomb-v-90007761-01",
-                            synset: "ewn-90007761-v",
-                            relations: [],
+                            id: "ewn-zymolytic-a-03011955-02",
+                            synset: "ewn-03011955-a",
+                            relations: [
+                                SenseRelation {
+                                    rel_type: Derivation,
+                                    target: "ewn-zymolysis-n-13596636-02",
+                                },
+                                SenseRelation {
+                                    rel_type: Pertainym,
+                                    target: "ewn-zymosis-n-13596636-01",
+                                },
+                            ],
                         },
                     ],
                 },
                 LexicalEntry {
-                    id: "ewn-switch_up-v",
+                    id: "ewn-zymosis-n",
                     lemma: Lemma {
-                        written_form: "switch up",
-                        part_of_speech: Verb,
+                        written_form: "zymosis",
+                        part_of_speech: Noun,
                     },
                     senses: [
                         Sense {
-                            id: "ewn-switch_up-v-90020001-01",
-                            synset: "ewn-90020001-v",
-                            relations: [],
+                            id: "ewn-zymosis-n-13596636-01",
+                            synset: "ewn-13596636-n",
+                            relations: [
+                                SenseRelation {
+                                    rel_type: Derivation,
+                                    target: "ewn-zymotic-a-03011955-01",
+                                },
+                            ],
+                        },
+                        Sense {
+                            id: "ewn-zymosis-n-13596429-01",
+                            synset: "ewn-13596429-n",
+                            relations: [
+                                SenseRelation {
+                                    rel_type: Derivation,
+                                    target: "ewn-zymotic-a-03011849-01",
+                                },
+                            ],
                         },
                     ],
                 },
                 LexicalEntry {
-                    id: "ewn-unfriend-v",
+                    id: "ewn-zymotic-a",
                     lemma: Lemma {
-                        written_form: "unfriend",
-                        part_of_speech: Verb,
+                        written_form: "zymotic",
+                        part_of_speech: Adjective,
                     },
                     senses: [
                         Sense {
-                            id: "ewn-unfriend-v-90016131-01",
-                            synset: "ewn-90016131-v",
-                            relations: [],
+                            id: "ewn-zymotic-a-03011955-01",
+                            synset: "ewn-03011955-a",
+                            relations: [
+                                SenseRelation {
+                                    rel_type: Derivation,
+                                    target: "ewn-zymosis-n-13596636-01",
+                                },
+                                SenseRelation {
+                                    rel_type: Pertainym,
+                                    target: "ewn-zymosis-n-13596636-01",
+                                },
+                            ],
+                        },
+                        Sense {
+                            id: "ewn-zymotic-a-03011849-01",
+                            synset: "ewn-03011849-a",
+                            relations: [
+                                SenseRelation {
+                                    rel_type: Derivation,
+                                    target: "ewn-zymosis-n-13596429-01",
+                                },
+                                SenseRelation {
+                                    rel_type: Pertainym,
+                                    target: "ewn-zymosis-n-13596429-01",
+                                },
+                            ],
                         },
                     ],
                 },
                 LexicalEntry {
-                    id: "ewn-untag-v",
+                    id: "ewn-zymurgy-n",
                     lemma: Lemma {
-                        written_form: "untag",
-                        part_of_speech: Verb,
+                        written_form: "zymurgy",
+                        part_of_speech: Noun,
                     },
                     senses: [
                         Sense {
-                            id: "ewn-untag-v-90004911-01",
-                            synset: "ewn-90004911-v",
+                            id: "ewn-zymurgy-n-06089949-02",
+                            synset: "ewn-06089949-n",
                             relations: [],
                         },
                     ],
@@ -246,192 +252,135 @@ fn t() {
         expect![[r#"
             [
                 Synset {
-                    id: "ewn-01159300-v",
+                    id: "ewn-00001740-a",
                     definitions: [
-                        "serve oneself to, or consume regularly",
+                        "(usually followed by `to\') having the necessary means or skill or know-how or authority to do something",
                     ],
                     examples: [
-                        "\"Have another bowl of chicken soup!\"",
-                        "\"I don\'t take sugar in my coffee\"",
+                        "\"able to swim\"",
+                        "\"she was able to program her computer\"",
+                        "\"we were at last able to buy a car\"",
+                        "\"able to get a grant for the project\"",
                     ],
                     relations: [
                         SynsetRelation {
-                            rel_type: Hyponym,
-                            target: "ewn-01164607-v",
+                            rel_type: Attribute,
+                            target: "ewn-05207437-n",
                         },
                         SynsetRelation {
-                            rel_type: Hyponym,
-                            target: "ewn-01167359-v",
-                        },
-                        SynsetRelation {
-                            rel_type: Hyponym,
-                            target: "ewn-01168667-v",
-                        },
-                        SynsetRelation {
-                            rel_type: Hyponym,
-                            target: "ewn-01172332-v",
-                        },
-                        SynsetRelation {
-                            rel_type: Hyponym,
-                            target: "ewn-01173463-v",
-                        },
-                        SynsetRelation {
-                            rel_type: Hyponym,
-                            target: "ewn-01174998-v",
-                        },
-                        SynsetRelation {
-                            rel_type: Hyponym,
-                            target: "ewn-01182162-v",
-                        },
-                        SynsetRelation {
-                            rel_type: Hyponym,
-                            target: "ewn-01196254-v",
-                        },
-                        SynsetRelation {
-                            rel_type: Hyponym,
-                            target: "ewn-01197832-v",
-                        },
-                        SynsetRelation {
-                            rel_type: Hyponym,
-                            target: "ewn-01200618-v",
-                        },
-                        SynsetRelation {
-                            rel_type: Hyponym,
-                            target: "ewn-01208079-v",
-                        },
-                        SynsetRelation {
-                            rel_type: IsEntailedBy,
-                            target: "ewn-01179415-v",
-                        },
-                        SynsetRelation {
-                            rel_type: IsEntailedBy,
-                            target: "ewn-01199976-v",
-                        },
-                        SynsetRelation {
-                            rel_type: IsEntailedBy,
-                            target: "ewn-01206641-v",
+                            rel_type: Attribute,
+                            target: "ewn-05624029-n",
                         },
                     ],
                 },
                 Synset {
-                    id: "ewn-01159815-v",
+                    id: "ewn-00001740-n",
                     definitions: [
-                        "use up (resources or materials)",
-                    ],
-                    examples: [
-                        "\"this car consumes a lot of gas\"",
-                        "\"We exhausted our savings\"",
-                        "\"They run through 20 bottles of wine a week\"",
-                    ],
-                    relations: [
-                        SynsetRelation {
-                            rel_type: Hypernym,
-                            target: "ewn-02271905-v",
-                        },
-                        SynsetRelation {
-                            rel_type: Hyponym,
-                            target: "ewn-00562791-v",
-                        },
-                        SynsetRelation {
-                            rel_type: Hyponym,
-                            target: "ewn-01160320-v",
-                        },
-                        SynsetRelation {
-                            rel_type: Hyponym,
-                            target: "ewn-01194178-v",
-                        },
-                        SynsetRelation {
-                            rel_type: Hyponym,
-                            target: "ewn-01207620-v",
-                        },
-                        SynsetRelation {
-                            rel_type: Hyponym,
-                            target: "ewn-02272374-v",
-                        },
-                        SynsetRelation {
-                            rel_type: Similar,
-                            target: "ewn-02272834-v",
-                        },
-                        SynsetRelation {
-                            rel_type: Hyponym,
-                            target: "ewn-02285714-v",
-                        },
-                        SynsetRelation {
-                            rel_type: IsEntailedBy,
-                            target: "ewn-01160888-v",
-                        },
-                        SynsetRelation {
-                            rel_type: IsEntailedBy,
-                            target: "ewn-01198337-v",
-                        },
-                    ],
-                },
-                Synset {
-                    id: "ewn-01160320-v",
-                    definitions: [
-                        "deplete of resources",
-                    ],
-                    examples: [
-                        "\"The exercise class drains me of energy\"",
-                    ],
-                    relations: [
-                        SynsetRelation {
-                            rel_type: Hypernym,
-                            target: "ewn-01159815-v",
-                        },
-                    ],
-                },
-                Synset {
-                    id: "ewn-01160479-v",
-                    definitions: [
-                        "spend extravagantly",
-                    ],
-                    examples: [
-                        "\"waste not, want not\"",
-                    ],
-                    relations: [
-                        SynsetRelation {
-                            rel_type: Hypernym,
-                            target: "ewn-02271905-v",
-                        },
-                        SynsetRelation {
-                            rel_type: Hyponym,
-                            target: "ewn-01174572-v",
-                        },
-                        SynsetRelation {
-                            rel_type: Hyponym,
-                            target: "ewn-01198337-v",
-                        },
-                        SynsetRelation {
-                            rel_type: Hyponym,
-                            target: "ewn-01207423-v",
-                        },
-                        SynsetRelation {
-                            rel_type: Hyponym,
-                            target: "ewn-02269409-v",
-                        },
-                        SynsetRelation {
-                            rel_type: Hyponym,
-                            target: "ewn-02271162-v",
-                        },
-                        SynsetRelation {
-                            rel_type: Hyponym,
-                            target: "ewn-02273848-v",
-                        },
-                    ],
-                },
-                Synset {
-                    id: "ewn-01160800-v",
-                    definitions: [
-                        "use frugally or carefully",
+                        "that which is perceived or known or inferred to have its own distinct existence (living or nonliving)",
                     ],
                     examples: [],
                     relations: [
                         SynsetRelation {
-                            rel_type: Hypernym,
-                            target: "ewn-01160888-v",
+                            rel_type: Hyponym,
+                            target: "ewn-00001930-n",
+                        },
+                        SynsetRelation {
+                            rel_type: Hyponym,
+                            target: "ewn-00002137-n",
+                        },
+                        SynsetRelation {
+                            rel_type: Hyponym,
+                            target: "ewn-04431553-n",
                         },
                     ],
+                },
+                Synset {
+                    id: "ewn-00001740-r",
+                    definitions: [
+                        "without musical accompaniment",
+                    ],
+                    examples: [
+                        "\"they performed a cappella\"",
+                    ],
+                    relations: [],
+                },
+                Synset {
+                    id: "ewn-00001740-v",
+                    definitions: [
+                        "draw air into, and expel out of, the lungs",
+                    ],
+                    examples: [
+                        "\"I can breathe better when the air is clean\"",
+                        "\"The patient is respiring\"",
+                    ],
+                    relations: [
+                        SynsetRelation {
+                            rel_type: Entails,
+                            target: "ewn-00005041-v",
+                        },
+                        SynsetRelation {
+                            rel_type: Entails,
+                            target: "ewn-00004227-v",
+                        },
+                        SynsetRelation {
+                            rel_type: Similar,
+                            target: "ewn-00002325-v",
+                        },
+                        SynsetRelation {
+                            rel_type: Similar,
+                            target: "ewn-00002573-v",
+                        },
+                        SynsetRelation {
+                            rel_type: Hyponym,
+                            target: "ewn-00002573-v",
+                        },
+                        SynsetRelation {
+                            rel_type: Hyponym,
+                            target: "ewn-00002724-v",
+                        },
+                        SynsetRelation {
+                            rel_type: Hyponym,
+                            target: "ewn-00002942-v",
+                        },
+                        SynsetRelation {
+                            rel_type: Hyponym,
+                            target: "ewn-00003826-v",
+                        },
+                        SynsetRelation {
+                            rel_type: Hyponym,
+                            target: "ewn-00004032-v",
+                        },
+                        SynsetRelation {
+                            rel_type: Hyponym,
+                            target: "ewn-00004227-v",
+                        },
+                        SynsetRelation {
+                            rel_type: Hyponym,
+                            target: "ewn-00005041-v",
+                        },
+                        SynsetRelation {
+                            rel_type: Hyponym,
+                            target: "ewn-00006697-v",
+                        },
+                        SynsetRelation {
+                            rel_type: Hyponym,
+                            target: "ewn-00007328-v",
+                        },
+                        SynsetRelation {
+                            rel_type: Hyponym,
+                            target: "ewn-00017024-v",
+                        },
+                    ],
+                },
+                Synset {
+                    id: "ewn-00001885-r",
+                    definitions: [
+                        "in the Christian era; used before dates after the supposed year Christ was born",
+                    ],
+                    examples: [
+                        "\"in AD 200\"",
+                    ],
+                    relations: [],
                 },
             ]
         "#]],
@@ -442,67 +391,83 @@ fn t() {
         expect![[r#"
             [
                 Synset {
-                    id: "ewn-91001651-v",
+                    id: "ewn-92471097-n",
                     definitions: [
-                        "To run a processor (CPU), or any electronic logic device, at a speed higher than is recommended by the manufacturer.",
+                        "an art style in late 16th century Europe characterized by spatial incongruity and excessive elongation of the human figures.",
                     ],
-                    examples: [],
+                    examples: [
+                        "Mannerism favors compositional tension and instability rather than the balance and clarity of earlier Renaissance painting.",
+                    ],
                     relations: [
                         SynsetRelation {
                             rel_type: Hypernym,
-                            target: "ewn-00230031-v",
+                            target: "ewn-04936599-n",
                         },
                     ],
                 },
                 Synset {
-                    id: "ewn-90007761-v",
+                    id: "ewn-92471179-n",
                     definitions: [
-                        "to jump into someone\'s photo",
+                        "a surface generated by a moving straight line with the result that through every point on the surface a line can be drawn lying wholly in the surface.",
                     ],
-                    examples: [],
+                    examples: [
+                        "In algebraic geometry, ruled surfaces were originally defined as projective surfaces in projective space containing a straight line through any given point.",
+                    ],
                     relations: [
                         SynsetRelation {
                             rel_type: Hypernym,
-                            target: "ewn-00521099-v",
+                            target: "ewn-04369112-n",
                         },
                     ],
                 },
                 Synset {
-                    id: "ewn-90020001-v",
+                    id: "ewn-92471253-n",
                     definitions: [
-                        "to change something temporarily",
+                        "a pentagon in which the angles are all equal, and the sides all equal.",
                     ],
-                    examples: [],
+                    examples: [
+                        "A regular pentagon has five lines of reflectional symmetry, and rotational symmetry of order 5 (through 72°, 144°, 216° and 288°).",
+                    ],
                     relations: [
                         SynsetRelation {
                             rel_type: Hypernym,
-                            target: "ewn-00380830-v",
+                            target: "ewn-13904858-n",
+                        },
+                        SynsetRelation {
+                            rel_type: Hypernym,
+                            target: "ewn-13889754-n",
                         },
                     ],
                 },
                 Synset {
-                    id: "ewn-90016131-v",
+                    id: "ewn-92767020-n",
                     definitions: [
-                        "To remove someone from your list of friends on a social network",
+                        "an electrical device used to create artificial light by use of an electric lamp; all light fixtures have a fixture body and a light socket to hold the lamp and allow for its replacement",
                     ],
                     examples: [],
                     relations: [
                         SynsetRelation {
                             rel_type: Hypernym,
-                            target: "ewn-00173351-v",
+                            target: "ewn-04270870-n",
+                        },
+                        SynsetRelation {
+                            rel_type: Hypernym,
+                            target: "ewn-03274312-n",
                         },
                     ],
                 },
                 Synset {
-                    id: "ewn-90004911-v",
+                    id: "ewn-92767095-n",
                     definitions: [
-                        "to remove a metadata tag from an internet post",
+                        "a trained person hired to determine the sex of chicken and other hatchlings.",
                     ],
-                    examples: [],
+                    examples: [
+                        "Chick sexing is the method of distinguishing the sex of chicken and other hatchlings, usually by a trained person called a chick sexer or chicken sexer.",
+                    ],
                     relations: [
                         SynsetRelation {
                             rel_type: Hypernym,
-                            target: "ewn-00572138-v",
+                            target: "ewn-10451389-n",
                         },
                     ],
                 },
