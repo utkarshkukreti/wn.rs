@@ -89,6 +89,8 @@ pub enum SenseRelationType {
 #[derive(Clone, Debug, PartialEq, serde::Deserialize)]
 pub struct Synset {
     pub id: S,
+    #[serde(rename = "partOfSpeech")]
+    pub part_of_speech: PartOfSpeech,
     #[serde(rename = "Definition")]
     pub definitions: V<S>,
     #[serde(rename = "Example", default)]
