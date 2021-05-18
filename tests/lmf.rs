@@ -44,6 +44,7 @@ fn t() {
                         written_form: "\'hood",
                         part_of_speech: Noun,
                     },
+                    forms: [],
                     senses: [
                         Sense {
                             id: "ewn--ap-hood-n-08242255-02",
@@ -58,6 +59,7 @@ fn t() {
                         written_form: "\'s Gravenhage",
                         part_of_speech: Noun,
                     },
+                    forms: [],
                     senses: [
                         Sense {
                             id: "ewn--ap-s_Gravenhage-n-08970180-02",
@@ -72,6 +74,7 @@ fn t() {
                         written_form: "\'tween",
                         part_of_speech: Adverb,
                     },
+                    forms: [],
                     senses: [
                         Sense {
                             id: "ewn--ap-tween-r-00252367-02",
@@ -86,6 +89,7 @@ fn t() {
                         written_form: "\'tween decks",
                         part_of_speech: Adverb,
                     },
+                    forms: [],
                     senses: [
                         Sense {
                             id: "ewn--ap-tween_decks-r-00500491-02",
@@ -100,6 +104,7 @@ fn t() {
                         written_form: ".22-caliber",
                         part_of_speech: Adjective,
                     },
+                    forms: [],
                     senses: [
                         Sense {
                             id: "ewn-.22-caliber-a-03157978-02",
@@ -127,6 +132,7 @@ fn t() {
                         written_form: "zymolysis",
                         part_of_speech: Noun,
                     },
+                    forms: [],
                     senses: [
                         Sense {
                             id: "ewn-zymolysis-n-13596636-02",
@@ -146,6 +152,7 @@ fn t() {
                         written_form: "zymolytic",
                         part_of_speech: Adjective,
                     },
+                    forms: [],
                     senses: [
                         Sense {
                             id: "ewn-zymolytic-a-03011955-02",
@@ -169,6 +176,7 @@ fn t() {
                         written_form: "zymosis",
                         part_of_speech: Noun,
                     },
+                    forms: [],
                     senses: [
                         Sense {
                             id: "ewn-zymosis-n-13596636-01",
@@ -198,6 +206,7 @@ fn t() {
                         written_form: "zymotic",
                         part_of_speech: Adjective,
                     },
+                    forms: [],
                     senses: [
                         Sense {
                             id: "ewn-zymotic-a-03011955-01",
@@ -235,11 +244,107 @@ fn t() {
                         written_form: "zymurgy",
                         part_of_speech: Noun,
                     },
+                    forms: [],
                     senses: [
                         Sense {
                             id: "ewn-zymurgy-n-06089949-02",
                             synset: "ewn-06089949-n",
                             relations: [],
+                        },
+                    ],
+                },
+            ]
+        "#]],
+    );
+
+    check(
+        lexicon
+            .lexical_entries
+            .iter()
+            .filter(|lexical_entry| lexical_entry.forms.len() > 0)
+            .take(3)
+            .collect::<Vec<_>>(),
+        expect![[r#"
+            [
+                LexicalEntry {
+                    id: "ewn-aardwolf-n",
+                    lemma: Lemma {
+                        written_form: "aardwolf",
+                        part_of_speech: Noun,
+                    },
+                    forms: [
+                        Form {
+                            written_form: "aardwolves",
+                        },
+                    ],
+                    senses: [
+                        Sense {
+                            id: "ewn-aardwolf-n-02120828-01",
+                            synset: "ewn-02120828-n",
+                            relations: [],
+                        },
+                    ],
+                },
+                LexicalEntry {
+                    id: "ewn-abacus-n",
+                    lemma: Lemma {
+                        written_form: "abacus",
+                        part_of_speech: Noun,
+                    },
+                    forms: [
+                        Form {
+                            written_form: "abaci",
+                        },
+                    ],
+                    senses: [
+                        Sense {
+                            id: "ewn-abacus-n-02668977-01",
+                            synset: "ewn-02668977-n",
+                            relations: [],
+                        },
+                        Sense {
+                            id: "ewn-abacus-n-02668826-01",
+                            synset: "ewn-02668826-n",
+                            relations: [],
+                        },
+                    ],
+                },
+                LexicalEntry {
+                    id: "ewn-abet-v",
+                    lemma: Lemma {
+                        written_form: "abet",
+                        part_of_speech: Verb,
+                    },
+                    forms: [
+                        Form {
+                            written_form: "abetted",
+                        },
+                        Form {
+                            written_form: "abetting",
+                        },
+                    ],
+                    senses: [
+                        Sense {
+                            id: "ewn-abet-v-02554908-01",
+                            synset: "ewn-02554908-v",
+                            relations: [
+                                SenseRelation {
+                                    rel_type: Derivation,
+                                    target: "ewn-abetment-n-07266287-01",
+                                },
+                                SenseRelation {
+                                    rel_type: Derivation,
+                                    target: "ewn-abettal-n-07266287-02",
+                                },
+                                SenseRelation {
+                                    rel_type: Derivation,
+                                    target: "ewn-abettor-n-09775380-01",
+                                },
+                                SenseRelation {
+                                    rel_type: Derivation,
+                                    target: "ewn-abetter-n-09775380-02",
+                                },
+                            ],
                         },
                     ],
                 },
