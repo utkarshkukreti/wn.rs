@@ -9,7 +9,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
-        rust: [stable, nightly, 1.45.2]
+        rust: [stable, nightly, 1.53.0]
     steps:
       - uses: actions/checkout@v2
       - uses: actions-rs/toolchain@v1
@@ -20,7 +20,5 @@ jobs:
       - run: make
       - run: cargo build --release
       - run: cargo test --release
-        # Tests are broken on nightly due to https://github.com/rust-lang/rust/pull/83079.
-        if: ${{ matrix.rust != 'nightly' }}
       - run: cargo fmt -- --check
       - run: cargo clippy

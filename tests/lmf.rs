@@ -41,7 +41,7 @@ fn t() {
                 LexicalEntry {
                     id: "ewn--ap-hood-n",
                     lemma: Lemma {
-                        written_form: "\'hood",
+                        written_form: "'hood",
                         part_of_speech: Noun,
                     },
                     forms: [],
@@ -56,7 +56,7 @@ fn t() {
                 LexicalEntry {
                     id: "ewn--ap-s_Gravenhage-n",
                     lemma: Lemma {
-                        written_form: "\'s Gravenhage",
+                        written_form: "'s Gravenhage",
                         part_of_speech: Noun,
                     },
                     forms: [],
@@ -71,7 +71,7 @@ fn t() {
                 LexicalEntry {
                     id: "ewn--ap-tween-r",
                     lemma: Lemma {
-                        written_form: "\'tween",
+                        written_form: "'tween",
                         part_of_speech: Adverb,
                     },
                     forms: [],
@@ -86,7 +86,7 @@ fn t() {
                 LexicalEntry {
                     id: "ewn--ap-tween_decks-r",
                     lemma: Lemma {
-                        written_form: "\'tween decks",
+                        written_form: "'tween decks",
                         part_of_speech: Adverb,
                     },
                     forms: [],
@@ -360,7 +360,7 @@ fn t() {
                     id: "ewn-00001740-a",
                     part_of_speech: Adjective,
                     definitions: [
-                        "(usually followed by `to\') having the necessary means or skill or know-how or authority to do something",
+                        "(usually followed by `to') having the necessary means or skill or know-how or authority to do something",
                     ],
                     examples: [
                         "\"able to swim\"",
