@@ -24,8 +24,8 @@ fn t() {
         "https://github.com/globalwordnet/english-wordnet"
     );
 
-    assert_eq!(lexicon.lexical_entries.len(), 163094);
-    assert_eq!(lexicon.synsets.len(), 120031);
+    assert_eq!(lexicon.lexical_entries.len(), 163097);
+    assert_eq!(lexicon.synsets.len(), 120030);
 
     fn check<T: std::fmt::Debug>(t: T, expect: Expect) {
         expect.assert_debug_eq(&t)
