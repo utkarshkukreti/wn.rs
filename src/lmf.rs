@@ -89,6 +89,7 @@ pub enum SenseRelationType {
     HasDomainRegion,
     HasDomainTopic,
     IsExemplifiedBy,
+    Other,
     Participle,
     Pertainym,
     Similar,

@@ -11,7 +11,7 @@ fn t() {
     let mut lexicon = root.lexicons.into_vec().remove(0);
 
     assert_eq!(&*lexicon.id, "ewn");
-    assert_eq!(&*lexicon.label, "English WordNet");
+    assert_eq!(&*lexicon.label, "Open English WordNet");
     assert_eq!(&*lexicon.language, "en");
     assert_eq!(&*lexicon.email, "english-wordnet@googlegroups.com");
     assert_eq!(
@@ -24,8 +24,8 @@ fn t() {
         "https://github.com/globalwordnet/english-wordnet"
     );
 
-    assert_eq!(lexicon.lexical_entries.len(), 163097);
-    assert_eq!(lexicon.synsets.len(), 120030);
+    assert_eq!(lexicon.lexical_entries.len(), 163161);
+    assert_eq!(lexicon.synsets.len(), 120039);
 
     fn check<T: std::fmt::Debug>(t: T, expect: Expect) {
         expect.assert_debug_eq(&t)
@@ -47,7 +47,7 @@ fn t() {
                     forms: [],
                     senses: [
                         Sense {
-                            id: "ewn--ap-hood-n-08242255-02",
+                            id: "ewn--ap-hood__1_14_01__",
                             synset: "ewn-08242255-n",
                             relations: [],
                         },
@@ -62,7 +62,7 @@ fn t() {
                     forms: [],
                     senses: [
                         Sense {
-                            id: "ewn--ap-s_Gravenhage-n-08970180-02",
+                            id: "ewn--ap-s_gravenhage__1_15_00__",
                             synset: "ewn-08970180-n",
                             relations: [],
                         },
@@ -77,7 +77,7 @@ fn t() {
                     forms: [],
                     senses: [
                         Sense {
-                            id: "ewn--ap-tween-r-00252367-02",
+                            id: "ewn--ap-tween__4_02_00__",
                             synset: "ewn-00252367-r",
                             relations: [],
                         },
@@ -92,7 +92,7 @@ fn t() {
                     forms: [],
                     senses: [
                         Sense {
-                            id: "ewn--ap-tween_decks-r-00500491-02",
+                            id: "ewn--ap-tween_decks__4_02_00__",
                             synset: "ewn-00500491-r",
                             relations: [],
                         },
@@ -107,12 +107,12 @@ fn t() {
                     forms: [],
                     senses: [
                         Sense {
-                            id: "ewn-.22-caliber-a-03157978-02",
+                            id: "ewn-.22-caliber__3_01_00__",
                             synset: "ewn-03157978-a",
                             relations: [
                                 SenseRelation {
                                     rel_type: Pertainym,
-                                    target: "ewn-caliber-n-05110583-03",
+                                    target: "ewn-caliber__1_07_01__",
                                 },
                             ],
                         },
@@ -135,12 +135,12 @@ fn t() {
                     forms: [],
                     senses: [
                         Sense {
-                            id: "ewn-zymolysis-n-13596636-02",
+                            id: "ewn-zymolysis__1_22_00__",
                             synset: "ewn-13596636-n",
                             relations: [
                                 SenseRelation {
                                     rel_type: Derivation,
-                                    target: "ewn-zymolytic-a-03011955-02",
+                                    target: "ewn-zymolytic__3_01_00__",
                                 },
                             ],
                         },
@@ -155,16 +155,16 @@ fn t() {
                     forms: [],
                     senses: [
                         Sense {
-                            id: "ewn-zymolytic-a-03011955-02",
+                            id: "ewn-zymolytic__3_01_00__",
                             synset: "ewn-03011955-a",
                             relations: [
                                 SenseRelation {
                                     rel_type: Derivation,
-                                    target: "ewn-zymolysis-n-13596636-02",
+                                    target: "ewn-zymolysis__1_22_00__",
                                 },
                                 SenseRelation {
                                     rel_type: Pertainym,
-                                    target: "ewn-zymosis-n-13596636-01",
+                                    target: "ewn-zymosis__1_22_01__",
                                 },
                             ],
                         },
@@ -179,22 +179,22 @@ fn t() {
                     forms: [],
                     senses: [
                         Sense {
-                            id: "ewn-zymosis-n-13596636-01",
+                            id: "ewn-zymosis__1_22_01__",
                             synset: "ewn-13596636-n",
                             relations: [
                                 SenseRelation {
                                     rel_type: Derivation,
-                                    target: "ewn-zymotic-a-03011955-01",
+                                    target: "ewn-zymotic__3_01_01__",
                                 },
                             ],
                         },
                         Sense {
-                            id: "ewn-zymosis-n-13596429-01",
+                            id: "ewn-zymosis__1_22_00__",
                             synset: "ewn-13596429-n",
                             relations: [
                                 SenseRelation {
                                     rel_type: Derivation,
-                                    target: "ewn-zymotic-a-03011849-01",
+                                    target: "ewn-zymotic__3_01_00__",
                                 },
                             ],
                         },
@@ -209,30 +209,30 @@ fn t() {
                     forms: [],
                     senses: [
                         Sense {
-                            id: "ewn-zymotic-a-03011955-01",
+                            id: "ewn-zymotic__3_01_01__",
                             synset: "ewn-03011955-a",
                             relations: [
                                 SenseRelation {
                                     rel_type: Derivation,
-                                    target: "ewn-zymosis-n-13596636-01",
+                                    target: "ewn-zymosis__1_22_01__",
                                 },
                                 SenseRelation {
                                     rel_type: Pertainym,
-                                    target: "ewn-zymosis-n-13596636-01",
+                                    target: "ewn-zymosis__1_22_01__",
                                 },
                             ],
                         },
                         Sense {
-                            id: "ewn-zymotic-a-03011849-01",
+                            id: "ewn-zymotic__3_01_00__",
                             synset: "ewn-03011849-a",
                             relations: [
                                 SenseRelation {
                                     rel_type: Derivation,
-                                    target: "ewn-zymosis-n-13596429-01",
+                                    target: "ewn-zymosis__1_22_00__",
                                 },
                                 SenseRelation {
                                     rel_type: Pertainym,
-                                    target: "ewn-zymosis-n-13596429-01",
+                                    target: "ewn-zymosis__1_22_00__",
                                 },
                             ],
                         },
@@ -247,7 +247,7 @@ fn t() {
                     forms: [],
                     senses: [
                         Sense {
-                            id: "ewn-zymurgy-n-06089949-02",
+                            id: "ewn-zymurgy__1_09_00__",
                             synset: "ewn-06089949-n",
                             relations: [],
                         },
@@ -279,7 +279,7 @@ fn t() {
                     ],
                     senses: [
                         Sense {
-                            id: "ewn-aardwolf-n-02120828-01",
+                            id: "ewn-aardwolf__1_05_00__",
                             synset: "ewn-02120828-n",
                             relations: [],
                         },
@@ -298,12 +298,12 @@ fn t() {
                     ],
                     senses: [
                         Sense {
-                            id: "ewn-abacus-n-02668977-01",
+                            id: "ewn-abacus__1_06_01__",
                             synset: "ewn-02668977-n",
                             relations: [],
                         },
                         Sense {
-                            id: "ewn-abacus-n-02668826-01",
+                            id: "ewn-abacus__1_06_00__",
                             synset: "ewn-02668826-n",
                             relations: [],
                         },
@@ -325,24 +325,24 @@ fn t() {
                     ],
                     senses: [
                         Sense {
-                            id: "ewn-abet-v-02554908-01",
+                            id: "ewn-abet__2_41_00__",
                             synset: "ewn-02554908-v",
                             relations: [
                                 SenseRelation {
                                     rel_type: Derivation,
-                                    target: "ewn-abetment-n-07266287-01",
+                                    target: "ewn-abetment__1_10_00__",
                                 },
                                 SenseRelation {
                                     rel_type: Derivation,
-                                    target: "ewn-abettal-n-07266287-02",
+                                    target: "ewn-abettal__1_10_00__",
                                 },
                                 SenseRelation {
                                     rel_type: Derivation,
-                                    target: "ewn-abettor-n-09775380-01",
+                                    target: "ewn-abettor__1_18_00__",
                                 },
                                 SenseRelation {
                                     rel_type: Derivation,
-                                    target: "ewn-abetter-n-09775380-02",
+                                    target: "ewn-abetter__1_18_00__",
                                 },
                             ],
                         },
@@ -363,10 +363,10 @@ fn t() {
                         "(usually followed by `to') having the necessary means or skill or know-how or authority to do something",
                     ],
                     examples: [
-                        "\"able to swim\"",
-                        "\"she was able to program her computer\"",
-                        "\"we were at last able to buy a car\"",
-                        "\"able to get a grant for the project\"",
+                        "able to swim",
+                        "she was able to program her computer",
+                        "we were at last able to buy a car",
+                        "able to get a grant for the project",
                     ],
                     relations: [
                         SynsetRelation {
@@ -408,7 +408,7 @@ fn t() {
                         "without musical accompaniment",
                     ],
                     examples: [
-                        "\"they performed a cappella\"",
+                        "they performed a cappella",
                     ],
                     relations: [],
                 },
@@ -419,8 +419,8 @@ fn t() {
                         "draw air into, and expel out of, the lungs",
                     ],
                     examples: [
-                        "\"I can breathe better when the air is clean\"",
-                        "\"The patient is respiring\"",
+                        "I can breathe better when the air is clean",
+                        "The patient is respiring",
                     ],
                     relations: [
                         SynsetRelation {
@@ -488,7 +488,7 @@ fn t() {
                         "in the Christian era; used before dates after the supposed year Christ was born",
                     ],
                     examples: [
-                        "\"in AD 200\"",
+                        "in AD 200",
                     ],
                     relations: [],
                 },
