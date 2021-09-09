@@ -40,6 +40,8 @@ pub struct Lemma {
     pub written_form: S,
     #[serde(rename = "partOfSpeech")]
     pub part_of_speech: PartOfSpeech,
+    #[serde(rename = "Pronunciation", default)]
+    pub pronunciations: V<Pronunciation>,
 }
 
 #[derive(Clone, Debug, PartialEq, serde::Deserialize)]
@@ -60,6 +62,13 @@ pub enum PartOfSpeech {
     Noun,
     #[serde(rename = "v")]
     Verb,
+}
+
+#[derive(Clone, Debug, PartialEq, serde::Deserialize)]
+pub struct Pronunciation {
+    pub variety: Option<S>,
+    #[serde(rename = "$value")]
+    pub value: S,
 }
 
 #[derive(Clone, Debug, PartialEq, serde::Deserialize)]

@@ -43,6 +43,7 @@ fn t() {
                     lemma: Lemma {
                         written_form: "'hood",
                         part_of_speech: Noun,
+                        pronunciations: [],
                     },
                     forms: [],
                     senses: [
@@ -58,6 +59,7 @@ fn t() {
                     lemma: Lemma {
                         written_form: "'s Gravenhage",
                         part_of_speech: Noun,
+                        pronunciations: [],
                     },
                     forms: [],
                     senses: [
@@ -73,6 +75,7 @@ fn t() {
                     lemma: Lemma {
                         written_form: "'tween",
                         part_of_speech: Adverb,
+                        pronunciations: [],
                     },
                     forms: [],
                     senses: [
@@ -88,6 +91,7 @@ fn t() {
                     lemma: Lemma {
                         written_form: "'tween decks",
                         part_of_speech: Adverb,
+                        pronunciations: [],
                     },
                     forms: [],
                     senses: [
@@ -103,6 +107,7 @@ fn t() {
                     lemma: Lemma {
                         written_form: ".22-caliber",
                         part_of_speech: Adjective,
+                        pronunciations: [],
                     },
                     forms: [],
                     senses: [
@@ -131,6 +136,7 @@ fn t() {
                     lemma: Lemma {
                         written_form: "zymolysis",
                         part_of_speech: Noun,
+                        pronunciations: [],
                     },
                     forms: [],
                     senses: [
@@ -151,6 +157,7 @@ fn t() {
                     lemma: Lemma {
                         written_form: "zymolytic",
                         part_of_speech: Adjective,
+                        pronunciations: [],
                     },
                     forms: [],
                     senses: [
@@ -175,6 +182,7 @@ fn t() {
                     lemma: Lemma {
                         written_form: "zymosis",
                         part_of_speech: Noun,
+                        pronunciations: [],
                     },
                     forms: [],
                     senses: [
@@ -205,6 +213,14 @@ fn t() {
                     lemma: Lemma {
                         written_form: "zymotic",
                         part_of_speech: Adjective,
+                        pronunciations: [
+                            Pronunciation {
+                                variety: Some(
+                                    "GB",
+                                ),
+                                value: "zaɪˈmɒtɪk",
+                            },
+                        ],
                     },
                     forms: [],
                     senses: [
@@ -243,6 +259,7 @@ fn t() {
                     lemma: Lemma {
                         written_form: "zymurgy",
                         part_of_speech: Noun,
+                        pronunciations: [],
                     },
                     forms: [],
                     senses: [
@@ -271,6 +288,20 @@ fn t() {
                     lemma: Lemma {
                         written_form: "aardwolf",
                         part_of_speech: Noun,
+                        pronunciations: [
+                            Pronunciation {
+                                variety: Some(
+                                    "GB",
+                                ),
+                                value: "ˈɑːdˌwʊlf",
+                            },
+                            Pronunciation {
+                                variety: Some(
+                                    "US",
+                                ),
+                                value: "ˈɑɹd.ˌwʊlf",
+                            },
+                        ],
                     },
                     forms: [
                         Form {
@@ -290,6 +321,12 @@ fn t() {
                     lemma: Lemma {
                         written_form: "abacus",
                         part_of_speech: Noun,
+                        pronunciations: [
+                            Pronunciation {
+                                variety: None,
+                                value: "ˈæbəkəs",
+                            },
+                        ],
                     },
                     forms: [
                         Form {
@@ -314,6 +351,12 @@ fn t() {
                     lemma: Lemma {
                         written_form: "abet",
                         part_of_speech: Verb,
+                        pronunciations: [
+                            Pronunciation {
+                                variety: None,
+                                value: "əˈbɛt",
+                            },
+                        ],
                     },
                     forms: [
                         Form {
