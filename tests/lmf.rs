@@ -10,7 +10,7 @@ fn t() {
 
     let mut lexicon = root.lexicons.into_vec().remove(0);
 
-    assert_eq!(&*lexicon.id, "ewn");
+    assert_eq!(&*lexicon.id, "oewn");
     assert_eq!(&*lexicon.label, "Open English WordNet");
     assert_eq!(&*lexicon.language, "en");
     assert_eq!(&*lexicon.email, "english-wordnet@googlegroups.com");
@@ -18,7 +18,7 @@ fn t() {
         &*lexicon.license,
         "https://creativecommons.org/licenses/by/4.0/"
     );
-    assert_eq!(&*lexicon.version, "2020");
+    assert_eq!(&*lexicon.version, "2021");
     assert_eq!(
         &*lexicon.url,
         "https://github.com/globalwordnet/english-wordnet"
@@ -39,7 +39,9 @@ fn t() {
         expect![[r#"
             [
                 LexicalEntry {
-                    id: "ewn--ap-hood-n",
+                    id: "oewn--ap-hood-n",
+                    status: None,
+                    note: None,
                     lemma: Lemma {
                         written_form: "'hood",
                         part_of_speech: Noun,
@@ -48,14 +50,18 @@ fn t() {
                     forms: [],
                     senses: [
                         Sense {
-                            id: "ewn--ap-hood__1_14_01__",
-                            synset: "ewn-08242255-n",
-                            relations: [],
+                            id: "oewn--ap-hood__1.14.01..",
+                            synset_id: "oewn-08242255-n",
+                            senses_relations: [],
+                            examples: [],
                         },
                     ],
+                    syntactic_behaviours: [],
                 },
                 LexicalEntry {
-                    id: "ewn--ap-s_Gravenhage-n",
+                    id: "oewn--ap-s_Gravenhage-n",
+                    status: None,
+                    note: None,
                     lemma: Lemma {
                         written_form: "'s Gravenhage",
                         part_of_speech: Noun,
@@ -64,14 +70,18 @@ fn t() {
                     forms: [],
                     senses: [
                         Sense {
-                            id: "ewn--ap-s_gravenhage__1_15_00__",
-                            synset: "ewn-08970180-n",
-                            relations: [],
+                            id: "oewn--ap-s_gravenhage__1.15.00..",
+                            synset_id: "oewn-08970180-n",
+                            senses_relations: [],
+                            examples: [],
                         },
                     ],
+                    syntactic_behaviours: [],
                 },
                 LexicalEntry {
-                    id: "ewn--ap-tween-r",
+                    id: "oewn--ap-tween-r",
+                    status: None,
+                    note: None,
                     lemma: Lemma {
                         written_form: "'tween",
                         part_of_speech: Adverb,
@@ -80,14 +90,18 @@ fn t() {
                     forms: [],
                     senses: [
                         Sense {
-                            id: "ewn--ap-tween__4_02_00__",
-                            synset: "ewn-00252367-r",
-                            relations: [],
+                            id: "oewn--ap-tween__4.02.00..",
+                            synset_id: "oewn-00252367-r",
+                            senses_relations: [],
+                            examples: [],
                         },
                     ],
+                    syntactic_behaviours: [],
                 },
                 LexicalEntry {
-                    id: "ewn--ap-tween_decks-r",
+                    id: "oewn--ap-tween_decks-r",
+                    status: None,
+                    note: None,
                     lemma: Lemma {
                         written_form: "'tween decks",
                         part_of_speech: Adverb,
@@ -96,14 +110,18 @@ fn t() {
                     forms: [],
                     senses: [
                         Sense {
-                            id: "ewn--ap-tween_decks__4_02_00__",
-                            synset: "ewn-00500491-r",
-                            relations: [],
+                            id: "oewn--ap-tween_decks__4.02.00..",
+                            synset_id: "oewn-00500491-r",
+                            senses_relations: [],
+                            examples: [],
                         },
                     ],
+                    syntactic_behaviours: [],
                 },
                 LexicalEntry {
-                    id: "ewn-.22-caliber-a",
+                    id: "oewn-.22-caliber-a",
+                    status: None,
+                    note: None,
                     lemma: Lemma {
                         written_form: ".22-caliber",
                         part_of_speech: Adjective,
@@ -112,16 +130,18 @@ fn t() {
                     forms: [],
                     senses: [
                         Sense {
-                            id: "ewn-.22-caliber__3_01_00__",
-                            synset: "ewn-03157978-a",
-                            relations: [
+                            id: "oewn-.22-caliber__3.01.00..",
+                            synset_id: "oewn-03157978-a",
+                            senses_relations: [
                                 SenseRelation {
                                     rel_type: Pertainym,
-                                    target: "ewn-caliber__1_07_01__",
+                                    target: "oewn-caliber__1.07.01..",
                                 },
                             ],
+                            examples: [],
                         },
                     ],
+                    syntactic_behaviours: [],
                 },
             ]
         "#]],
@@ -132,7 +152,9 @@ fn t() {
         expect![[r#"
             [
                 LexicalEntry {
-                    id: "ewn-zymolysis-n",
+                    id: "oewn-zymolysis-n",
+                    status: None,
+                    note: None,
                     lemma: Lemma {
                         written_form: "zymolysis",
                         part_of_speech: Noun,
@@ -141,19 +163,23 @@ fn t() {
                     forms: [],
                     senses: [
                         Sense {
-                            id: "ewn-zymolysis__1_22_00__",
-                            synset: "ewn-13596636-n",
-                            relations: [
+                            id: "oewn-zymolysis__1.22.00..",
+                            synset_id: "oewn-13596636-n",
+                            senses_relations: [
                                 SenseRelation {
                                     rel_type: Derivation,
-                                    target: "ewn-zymolytic__3_01_00__",
+                                    target: "oewn-zymolytic__3.01.00..",
                                 },
                             ],
+                            examples: [],
                         },
                     ],
+                    syntactic_behaviours: [],
                 },
                 LexicalEntry {
-                    id: "ewn-zymolytic-a",
+                    id: "oewn-zymolytic-a",
+                    status: None,
+                    note: None,
                     lemma: Lemma {
                         written_form: "zymolytic",
                         part_of_speech: Adjective,
@@ -162,23 +188,27 @@ fn t() {
                     forms: [],
                     senses: [
                         Sense {
-                            id: "ewn-zymolytic__3_01_00__",
-                            synset: "ewn-03011955-a",
-                            relations: [
+                            id: "oewn-zymolytic__3.01.00..",
+                            synset_id: "oewn-03011955-a",
+                            senses_relations: [
                                 SenseRelation {
                                     rel_type: Derivation,
-                                    target: "ewn-zymolysis__1_22_00__",
+                                    target: "oewn-zymolysis__1.22.00..",
                                 },
                                 SenseRelation {
                                     rel_type: Pertainym,
-                                    target: "ewn-zymosis__1_22_01__",
+                                    target: "oewn-zymosis__1.22.01..",
                                 },
                             ],
+                            examples: [],
                         },
                     ],
+                    syntactic_behaviours: [],
                 },
                 LexicalEntry {
-                    id: "ewn-zymosis-n",
+                    id: "oewn-zymosis-n",
+                    status: None,
+                    note: None,
                     lemma: Lemma {
                         written_form: "zymosis",
                         part_of_speech: Noun,
@@ -187,29 +217,34 @@ fn t() {
                     forms: [],
                     senses: [
                         Sense {
-                            id: "ewn-zymosis__1_22_01__",
-                            synset: "ewn-13596636-n",
-                            relations: [
+                            id: "oewn-zymosis__1.22.01..",
+                            synset_id: "oewn-13596636-n",
+                            senses_relations: [
                                 SenseRelation {
                                     rel_type: Derivation,
-                                    target: "ewn-zymotic__3_01_01__",
+                                    target: "oewn-zymotic__3.01.01..",
                                 },
                             ],
+                            examples: [],
                         },
                         Sense {
-                            id: "ewn-zymosis__1_22_00__",
-                            synset: "ewn-13596429-n",
-                            relations: [
+                            id: "oewn-zymosis__1.22.00..",
+                            synset_id: "oewn-13596429-n",
+                            senses_relations: [
                                 SenseRelation {
                                     rel_type: Derivation,
-                                    target: "ewn-zymotic__3_01_00__",
+                                    target: "oewn-zymotic__3.01.00..",
                                 },
                             ],
+                            examples: [],
                         },
                     ],
+                    syntactic_behaviours: [],
                 },
                 LexicalEntry {
-                    id: "ewn-zymotic-a",
+                    id: "oewn-zymotic-a",
+                    status: None,
+                    note: None,
                     lemma: Lemma {
                         written_form: "zymotic",
                         part_of_speech: Adjective,
@@ -218,6 +253,8 @@ fn t() {
                                 variety: Some(
                                     "GB",
                                 ),
+                                notation: None,
+                                audio: None,
                                 value: "zaɪˈmɒtɪk",
                             },
                         ],
@@ -225,37 +262,42 @@ fn t() {
                     forms: [],
                     senses: [
                         Sense {
-                            id: "ewn-zymotic__3_01_01__",
-                            synset: "ewn-03011955-a",
-                            relations: [
+                            id: "oewn-zymotic__3.01.01..",
+                            synset_id: "oewn-03011955-a",
+                            senses_relations: [
                                 SenseRelation {
                                     rel_type: Derivation,
-                                    target: "ewn-zymosis__1_22_01__",
+                                    target: "oewn-zymosis__1.22.01..",
                                 },
                                 SenseRelation {
                                     rel_type: Pertainym,
-                                    target: "ewn-zymosis__1_22_01__",
+                                    target: "oewn-zymosis__1.22.01..",
                                 },
                             ],
+                            examples: [],
                         },
                         Sense {
-                            id: "ewn-zymotic__3_01_00__",
-                            synset: "ewn-03011849-a",
-                            relations: [
+                            id: "oewn-zymotic__3.01.00..",
+                            synset_id: "oewn-03011849-a",
+                            senses_relations: [
                                 SenseRelation {
                                     rel_type: Derivation,
-                                    target: "ewn-zymosis__1_22_00__",
+                                    target: "oewn-zymosis__1.22.00..",
                                 },
                                 SenseRelation {
                                     rel_type: Pertainym,
-                                    target: "ewn-zymosis__1_22_00__",
+                                    target: "oewn-zymosis__1.22.00..",
                                 },
                             ],
+                            examples: [],
                         },
                     ],
+                    syntactic_behaviours: [],
                 },
                 LexicalEntry {
-                    id: "ewn-zymurgy-n",
+                    id: "oewn-zymurgy-n",
+                    status: None,
+                    note: None,
                     lemma: Lemma {
                         written_form: "zymurgy",
                         part_of_speech: Noun,
@@ -264,11 +306,13 @@ fn t() {
                     forms: [],
                     senses: [
                         Sense {
-                            id: "ewn-zymurgy__1_09_00__",
-                            synset: "ewn-06089949-n",
-                            relations: [],
+                            id: "oewn-zymurgy__1.09.00..",
+                            synset_id: "oewn-06089949-n",
+                            senses_relations: [],
+                            examples: [],
                         },
                     ],
+                    syntactic_behaviours: [],
                 },
             ]
         "#]],
@@ -284,7 +328,9 @@ fn t() {
         expect![[r#"
             [
                 LexicalEntry {
-                    id: "ewn-aardwolf-n",
+                    id: "oewn-aardwolf-n",
+                    status: None,
+                    note: None,
                     lemma: Lemma {
                         written_form: "aardwolf",
                         part_of_speech: Noun,
@@ -293,12 +339,16 @@ fn t() {
                                 variety: Some(
                                     "GB",
                                 ),
+                                notation: None,
+                                audio: None,
                                 value: "ˈɑːdˌwʊlf",
                             },
                             Pronunciation {
                                 variety: Some(
                                     "US",
                                 ),
+                                notation: None,
+                                audio: None,
                                 value: "ˈɑɹd.ˌwʊlf",
                             },
                         ],
@@ -310,20 +360,26 @@ fn t() {
                     ],
                     senses: [
                         Sense {
-                            id: "ewn-aardwolf__1_05_00__",
-                            synset: "ewn-02120828-n",
-                            relations: [],
+                            id: "oewn-aardwolf__1.05.00..",
+                            synset_id: "oewn-02120828-n",
+                            senses_relations: [],
+                            examples: [],
                         },
                     ],
+                    syntactic_behaviours: [],
                 },
                 LexicalEntry {
-                    id: "ewn-abacus-n",
+                    id: "oewn-abacus-n",
+                    status: None,
+                    note: None,
                     lemma: Lemma {
                         written_form: "abacus",
                         part_of_speech: Noun,
                         pronunciations: [
                             Pronunciation {
                                 variety: None,
+                                notation: None,
+                                audio: None,
                                 value: "ˈæbəkəs",
                             },
                         ],
@@ -335,25 +391,32 @@ fn t() {
                     ],
                     senses: [
                         Sense {
-                            id: "ewn-abacus__1_06_01__",
-                            synset: "ewn-02668977-n",
-                            relations: [],
+                            id: "oewn-abacus__1.06.01..",
+                            synset_id: "oewn-02668977-n",
+                            senses_relations: [],
+                            examples: [],
                         },
                         Sense {
-                            id: "ewn-abacus__1_06_00__",
-                            synset: "ewn-02668826-n",
-                            relations: [],
+                            id: "oewn-abacus__1.06.00..",
+                            synset_id: "oewn-02668826-n",
+                            senses_relations: [],
+                            examples: [],
                         },
                     ],
+                    syntactic_behaviours: [],
                 },
                 LexicalEntry {
-                    id: "ewn-abet-v",
+                    id: "oewn-abet-v",
+                    status: None,
+                    note: None,
                     lemma: Lemma {
                         written_form: "abet",
                         part_of_speech: Verb,
                         pronunciations: [
                             Pronunciation {
                                 variety: None,
+                                notation: None,
+                                audio: None,
                                 value: "əˈbɛt",
                             },
                         ],
@@ -368,28 +431,30 @@ fn t() {
                     ],
                     senses: [
                         Sense {
-                            id: "ewn-abet__2_41_00__",
-                            synset: "ewn-02554908-v",
-                            relations: [
+                            id: "oewn-abet__2.41.00..",
+                            synset_id: "oewn-02554908-v",
+                            senses_relations: [
                                 SenseRelation {
                                     rel_type: Derivation,
-                                    target: "ewn-abetment__1_10_00__",
+                                    target: "oewn-abetment__1.10.00..",
                                 },
                                 SenseRelation {
                                     rel_type: Derivation,
-                                    target: "ewn-abettal__1_10_00__",
+                                    target: "oewn-abettal__1.10.00..",
                                 },
                                 SenseRelation {
                                     rel_type: Derivation,
-                                    target: "ewn-abettor__1_18_00__",
+                                    target: "oewn-abettor__1.18.00..",
                                 },
                                 SenseRelation {
                                     rel_type: Derivation,
-                                    target: "ewn-abetter__1_18_00__",
+                                    target: "oewn-abetter__1.18.00..",
                                 },
                             ],
+                            examples: [],
                         },
                     ],
+                    syntactic_behaviours: [],
                 },
             ]
         "#]],
@@ -400,11 +465,12 @@ fn t() {
         expect![[r#"
             [
                 Synset {
-                    id: "ewn-00001740-a",
+                    id: "oewn-00001740-a",
                     part_of_speech: Adjective,
                     definitions: [
                         "(usually followed by `to') having the necessary means or skill or know-how or authority to do something",
                     ],
+                    ili_definition: None,
                     examples: [
                         "able to swim",
                         "she was able to program her computer",
@@ -414,53 +480,56 @@ fn t() {
                     relations: [
                         SynsetRelation {
                             rel_type: Attribute,
-                            target: "ewn-05207437-n",
+                            target: "oewn-05207437-n",
                         },
                         SynsetRelation {
                             rel_type: Attribute,
-                            target: "ewn-05624029-n",
+                            target: "oewn-05624029-n",
                         },
                     ],
                 },
                 Synset {
-                    id: "ewn-00001740-n",
+                    id: "oewn-00001740-n",
                     part_of_speech: Noun,
                     definitions: [
                         "that which is perceived or known or inferred to have its own distinct existence (living or nonliving)",
                     ],
+                    ili_definition: None,
                     examples: [],
                     relations: [
                         SynsetRelation {
                             rel_type: Hyponym,
-                            target: "ewn-00001930-n",
+                            target: "oewn-00001930-n",
                         },
                         SynsetRelation {
                             rel_type: Hyponym,
-                            target: "ewn-00002137-n",
+                            target: "oewn-00002137-n",
                         },
                         SynsetRelation {
                             rel_type: Hyponym,
-                            target: "ewn-04431553-n",
+                            target: "oewn-04431553-n",
                         },
                     ],
                 },
                 Synset {
-                    id: "ewn-00001740-r",
+                    id: "oewn-00001740-r",
                     part_of_speech: Adverb,
                     definitions: [
                         "without musical accompaniment",
                     ],
+                    ili_definition: None,
                     examples: [
                         "they performed a cappella",
                     ],
                     relations: [],
                 },
                 Synset {
-                    id: "ewn-00001740-v",
+                    id: "oewn-00001740-v",
                     part_of_speech: Verb,
                     definitions: [
                         "draw air into, and expel out of, the lungs",
                     ],
+                    ili_definition: None,
                     examples: [
                         "I can breathe better when the air is clean",
                         "The patient is respiring",
@@ -468,68 +537,69 @@ fn t() {
                     relations: [
                         SynsetRelation {
                             rel_type: Entails,
-                            target: "ewn-00005041-v",
+                            target: "oewn-00005041-v",
                         },
                         SynsetRelation {
                             rel_type: Entails,
-                            target: "ewn-00004227-v",
+                            target: "oewn-00004227-v",
                         },
                         SynsetRelation {
                             rel_type: Similar,
-                            target: "ewn-00002325-v",
+                            target: "oewn-00002325-v",
                         },
                         SynsetRelation {
                             rel_type: Similar,
-                            target: "ewn-00002573-v",
+                            target: "oewn-00002573-v",
                         },
                         SynsetRelation {
                             rel_type: Hyponym,
-                            target: "ewn-00002573-v",
+                            target: "oewn-00002573-v",
                         },
                         SynsetRelation {
                             rel_type: Hyponym,
-                            target: "ewn-00002724-v",
+                            target: "oewn-00002724-v",
                         },
                         SynsetRelation {
                             rel_type: Hyponym,
-                            target: "ewn-00002942-v",
+                            target: "oewn-00002942-v",
                         },
                         SynsetRelation {
                             rel_type: Hyponym,
-                            target: "ewn-00003826-v",
+                            target: "oewn-00003826-v",
                         },
                         SynsetRelation {
                             rel_type: Hyponym,
-                            target: "ewn-00004032-v",
+                            target: "oewn-00004032-v",
                         },
                         SynsetRelation {
                             rel_type: Hyponym,
-                            target: "ewn-00004227-v",
+                            target: "oewn-00004227-v",
                         },
                         SynsetRelation {
                             rel_type: Hyponym,
-                            target: "ewn-00005041-v",
+                            target: "oewn-00005041-v",
                         },
                         SynsetRelation {
                             rel_type: Hyponym,
-                            target: "ewn-00006697-v",
+                            target: "oewn-00006697-v",
                         },
                         SynsetRelation {
                             rel_type: Hyponym,
-                            target: "ewn-00007328-v",
+                            target: "oewn-00007328-v",
                         },
                         SynsetRelation {
                             rel_type: Hyponym,
-                            target: "ewn-00017024-v",
+                            target: "oewn-00017024-v",
                         },
                     ],
                 },
                 Synset {
-                    id: "ewn-00001885-r",
+                    id: "oewn-00001885-r",
                     part_of_speech: Adverb,
                     definitions: [
                         "in the Christian era; used before dates after the supposed year Christ was born",
                     ],
+                    ili_definition: None,
                     examples: [
                         "in AD 200",
                     ],
@@ -544,88 +614,103 @@ fn t() {
         expect![[r#"
             [
                 Synset {
-                    id: "ewn-92471097-n",
+                    id: "oewn-92471097-n",
                     part_of_speech: Noun,
                     definitions: [
                         "an art style in late 16th century Europe characterized by spatial incongruity and excessive elongation of the human figures.",
                     ],
+                    ili_definition: Some(
+                        "an art style in late 16th century Europe characterized by spatial incongruity and excessive elongation of the human figures.",
+                    ),
                     examples: [
                         "Mannerism favors compositional tension and instability rather than the balance and clarity of earlier Renaissance painting.",
                     ],
                     relations: [
                         SynsetRelation {
                             rel_type: Hypernym,
-                            target: "ewn-04936599-n",
+                            target: "oewn-04936599-n",
                         },
                     ],
                 },
                 Synset {
-                    id: "ewn-92471179-n",
+                    id: "oewn-92471179-n",
                     part_of_speech: Noun,
                     definitions: [
                         "a surface generated by a moving straight line with the result that through every point on the surface a line can be drawn lying wholly in the surface.",
                     ],
+                    ili_definition: Some(
+                        "a surface generated by a moving straight line with the result that through every point on the surface a line can be drawn lying wholly in the surface.",
+                    ),
                     examples: [
                         "In algebraic geometry, ruled surfaces were originally defined as projective surfaces in projective space containing a straight line through any given point.",
                     ],
                     relations: [
                         SynsetRelation {
                             rel_type: Hypernym,
-                            target: "ewn-04369112-n",
+                            target: "oewn-04369112-n",
                         },
                     ],
                 },
                 Synset {
-                    id: "ewn-92471253-n",
+                    id: "oewn-92471253-n",
                     part_of_speech: Noun,
                     definitions: [
                         "a pentagon in which the angles are all equal, and the sides all equal.",
                     ],
+                    ili_definition: Some(
+                        "a pentagon in which the angles are all equal, and the sides all equal.",
+                    ),
                     examples: [
                         "A regular pentagon has five lines of reflectional symmetry, and rotational symmetry of order 5 (through 72°, 144°, 216° and 288°).",
                     ],
                     relations: [
                         SynsetRelation {
                             rel_type: Hypernym,
-                            target: "ewn-13904858-n",
+                            target: "oewn-13904858-n",
                         },
                         SynsetRelation {
                             rel_type: Hypernym,
-                            target: "ewn-13889754-n",
+                            target: "oewn-13889754-n",
                         },
                     ],
                 },
                 Synset {
-                    id: "ewn-92767020-n",
+                    id: "oewn-92767020-n",
                     part_of_speech: Noun,
                     definitions: [
                         "an electrical device used to create artificial light by use of an electric lamp; all light fixtures have a fixture body and a light socket to hold the lamp and allow for its replacement",
                     ],
+                    ili_definition: Some(
+                        "an electrical device used to create artificial light by use of an electric lamp; all light fixtures have a fixture body and a light socket to hold the lamp and allow for its replacement",
+                    ),
                     examples: [],
                     relations: [
                         SynsetRelation {
                             rel_type: Hypernym,
-                            target: "ewn-04270870-n",
+                            target: "oewn-04270870-n",
                         },
                         SynsetRelation {
                             rel_type: Hypernym,
-                            target: "ewn-03274312-n",
+                            target: "oewn-03274312-n",
                         },
                     ],
                 },
                 Synset {
-                    id: "ewn-92767095-n",
+                    id: "oewn-92767095-n",
                     part_of_speech: Noun,
                     definitions: [
                         "a trained person hired to determine the sex of chicken and other hatchlings.",
                     ],
+                    ili_definition: Some(
+                        "a trained person hired to determine the sex of chicken and other hatchlings.",
+                    ),
                     examples: [
                         "Chick sexing is the method of distinguishing the sex of chicken and other hatchlings, usually by a trained person called a chick sexer or chicken sexer.",
                     ],
                     relations: [
                         SynsetRelation {
                             rel_type: Hypernym,
-                            target: "ewn-10451389-n",
+                            target: "oewn-10451389-n",
                         },
                     ],
                 },

@@ -21,17 +21,23 @@ pub struct Lexicon {
     pub lexical_entries: V<LexicalEntry>,
     #[serde(rename = "Synset")]
     pub synsets: V<Synset>,
+    #[serde(rename = "SyntacticBehaviour", default)]
+    pub syntactic_behaviours: V<SyntacticBehaviour>,
 }
 
 #[derive(Clone, Debug, PartialEq, serde::Deserialize)]
 pub struct LexicalEntry {
     pub id: S,
+    pub status: Option<S>,
+    pub note: Option<S>,
     #[serde(rename = "Lemma")]
     pub lemma: Lemma,
     #[serde(rename = "Form", default)]
     pub forms: V<Form>,
     #[serde(rename = "Sense")]
     pub senses: V<Sense>,
+    #[serde(rename = "SyntacticBehaviour", default)]
+    pub syntactic_behaviours: V<SyntacticBehaviour>,
 }
 
 #[derive(Clone, Debug, PartialEq, serde::Deserialize)]
@@ -62,11 +68,21 @@ pub enum PartOfSpeech {
     Noun,
     #[serde(rename = "v")]
     Verb,
+    #[serde(rename = "c")]
+    Conjunction,
+    #[serde(rename = "p")]
+    Adposition,
+    #[serde(rename = "x")]
+    Other,
+    #[serde(rename = "u")]
+    Unknown,
 }
 
 #[derive(Clone, Debug, PartialEq, serde::Deserialize)]
 pub struct Pronunciation {
     pub variety: Option<S>,
+    pub notation: Option<S>,
+    pub audio: Option<S>,
     #[serde(rename = "$value")]
     pub value: S,
 }
@@ -74,9 +90,12 @@ pub struct Pronunciation {
 #[derive(Clone, Debug, PartialEq, serde::Deserialize)]
 pub struct Sense {
     pub id: S,
-    pub synset: S,
+    #[serde(rename = "synset")]
+    pub synset_id: S,
     #[serde(rename = "SenseRelation", default)]
-    pub relations: V<SenseRelation>,
+    pub sense_relations: V<SenseRelation>,
+    #[serde(rename = "Example", default)]
+    pub examples: V<S>,
 }
 
 #[derive(Clone, Debug, PartialEq, serde::Deserialize)]
@@ -102,6 +121,24 @@ pub enum SenseRelationType {
     Participle,
     Pertainym,
     Similar,
+    // =========
+    SimpleAspectIp,
+    SecondaryAspectIp,
+    SimpleAspectPi,
+    SecondaryAspectPi,
+    Feminine,
+    HasFeminine,
+    Masculine,
+    HasMasculine,
+    Young,
+    HasYoung,
+    Diminutive,
+    HasDiminutive,
+    Augmentative,
+    HasAugmentative,
+    AntoGradable,
+    AntoSimple,
+    AntoConverse,
 }
 
 #[derive(Clone, Debug, PartialEq, serde::Deserialize)]
@@ -111,6 +148,8 @@ pub struct Synset {
     pub part_of_speech: PartOfSpeech,
     #[serde(rename = "Definition")]
     pub definitions: V<S>,
+    #[serde(rename = "ILIDefinition")]
+    pub ili_definition: Option<S>,
     #[serde(rename = "Example", default)]
     pub examples: V<S>,
     #[serde(rename = "SynsetRelation", default)]
@@ -150,6 +189,77 @@ pub enum SynsetRelationType {
     MeroPart,
     MeroSubstance,
     Similar,
+    // =========
+    Agent,
+    Antonym,
+    BeInState,
+    ClassifiedBy,
+    Classifies,
+    CoAgentInstrument,
+    CoAgentPatient,
+    CoAgentResult,
+    CoInstrumentAgent,
+    CoInstrumentPatient,
+    CoInstrumentResult,
+    CoPatientAgent,
+    CoPatientInstrument,
+    CoResultAgent,
+    CoResultInstrument,
+    CoRole,
+    Direction,
+    EqSynonym,
+    HoloLocation,
+    HoloPortion,
+    Holonym,
+    InManner,
+    Instrument,
+    Involved,
+    InvolvedAgent,
+    InvolvedDirection,
+    InvolvedInstrument,
+    InvolvedLocation,
+    InvolvedPatient,
+    InvolvedResult,
+    InvolvedSourceDirection,
+    InvolvedTargetDirection,
+    Location,
+    MannerOf,
+    MeroLocation,
+    MeroPortion,
+    Meronym,
+    Other,
+    Patient,
+    RestrictedBy,
+    Restricts,
+    Result,
+    Role,
+    SourceDirection,
+    StateOf,
+    TargetDirection,
+    Subevent,
+    IsSubeventOf,
+    Feminine,
+    HasFeminine,
+    Masculine,
+    HasMasculine,
+    Young,
+    HasYoung,
+    Diminutive,
+    HasDiminutive,
+    Augmentative,
+    HasAugmentative,
+    AntoGradable,
+    AntoSimple,
+    AntoConverse,
+    IrSynonym,
+}
+
+#[derive(Clone, Debug, PartialEq, serde::Deserialize)]
+pub struct SyntacticBehaviour {
+    #[serde(rename = "subcategorizationFrame")]
+    pub subcategorization_frame: S,
+    #[serde(default)]
+    pub senses: V<S>,
 }
 
 #[derive(Debug, thiserror::Error)]
