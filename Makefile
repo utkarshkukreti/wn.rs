@@ -1,4 +1,4 @@
-WORDNET_COMMIT = 3acb02ea157489c1785157c40e02bc65b2241303
+WORDNET_COMMIT = ad2320386b1589dca63c5d45071de5082ba58e40
 
 default: tests/fixtures/wordnet.xml
 
