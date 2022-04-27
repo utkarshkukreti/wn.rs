@@ -52,7 +52,7 @@ fn t() {
                         Sense {
                             id: "oewn--ap-hood__1.14.01..",
                             synset_id: "oewn-08242255-n",
-                            senses_relations: [],
+                            sense_relations: [],
                             examples: [],
                         },
                     ],
@@ -72,7 +72,7 @@ fn t() {
                         Sense {
                             id: "oewn--ap-s_gravenhage__1.15.00..",
                             synset_id: "oewn-08970180-n",
-                            senses_relations: [],
+                            sense_relations: [],
                             examples: [],
                         },
                     ],
@@ -92,7 +92,7 @@ fn t() {
                         Sense {
                             id: "oewn--ap-tween__4.02.00..",
                             synset_id: "oewn-00252367-r",
-                            senses_relations: [],
+                            sense_relations: [],
                             examples: [],
                         },
                     ],
@@ -112,7 +112,7 @@ fn t() {
                         Sense {
                             id: "oewn--ap-tween_decks__4.02.00..",
                             synset_id: "oewn-00500491-r",
-                            senses_relations: [],
+                            sense_relations: [],
                             examples: [],
                         },
                     ],
@@ -132,7 +132,7 @@ fn t() {
                         Sense {
                             id: "oewn-.22-caliber__3.01.00..",
                             synset_id: "oewn-03157978-a",
-                            senses_relations: [
+                            sense_relations: [
                                 SenseRelation {
                                     rel_type: Pertainym,
                                     target: "oewn-caliber__1.07.01..",
@@ -165,7 +165,7 @@ fn t() {
                         Sense {
                             id: "oewn-zymolysis__1.22.00..",
                             synset_id: "oewn-13596636-n",
-                            senses_relations: [
+                            sense_relations: [
                                 SenseRelation {
                                     rel_type: Derivation,
                                     target: "oewn-zymolytic__3.01.00..",
@@ -190,7 +190,7 @@ fn t() {
                         Sense {
                             id: "oewn-zymolytic__3.01.00..",
                             synset_id: "oewn-03011955-a",
-                            senses_relations: [
+                            sense_relations: [
                                 SenseRelation {
                                     rel_type: Derivation,
                                     target: "oewn-zymolysis__1.22.00..",
@@ -219,7 +219,7 @@ fn t() {
                         Sense {
                             id: "oewn-zymosis__1.22.01..",
                             synset_id: "oewn-13596636-n",
-                            senses_relations: [
+                            sense_relations: [
                                 SenseRelation {
                                     rel_type: Derivation,
                                     target: "oewn-zymotic__3.01.01..",
@@ -230,7 +230,7 @@ fn t() {
                         Sense {
                             id: "oewn-zymosis__1.22.00..",
                             synset_id: "oewn-13596429-n",
-                            senses_relations: [
+                            sense_relations: [
                                 SenseRelation {
                                     rel_type: Derivation,
                                     target: "oewn-zymotic__3.01.00..",
@@ -264,7 +264,7 @@ fn t() {
                         Sense {
                             id: "oewn-zymotic__3.01.01..",
                             synset_id: "oewn-03011955-a",
-                            senses_relations: [
+                            sense_relations: [
                                 SenseRelation {
                                     rel_type: Derivation,
                                     target: "oewn-zymosis__1.22.01..",
@@ -279,7 +279,7 @@ fn t() {
                         Sense {
                             id: "oewn-zymotic__3.01.00..",
                             synset_id: "oewn-03011849-a",
-                            senses_relations: [
+                            sense_relations: [
                                 SenseRelation {
                                     rel_type: Derivation,
                                     target: "oewn-zymosis__1.22.00..",
@@ -308,7 +308,7 @@ fn t() {
                         Sense {
                             id: "oewn-zymurgy__1.09.00..",
                             synset_id: "oewn-06089949-n",
-                            senses_relations: [],
+                            sense_relations: [],
                             examples: [],
                         },
                     ],
@@ -362,7 +362,7 @@ fn t() {
                         Sense {
                             id: "oewn-aardwolf__1.05.00..",
                             synset_id: "oewn-02120828-n",
-                            senses_relations: [],
+                            sense_relations: [],
                             examples: [],
                         },
                     ],
@@ -393,13 +393,13 @@ fn t() {
                         Sense {
                             id: "oewn-abacus__1.06.01..",
                             synset_id: "oewn-02668977-n",
-                            senses_relations: [],
+                            sense_relations: [],
                             examples: [],
                         },
                         Sense {
                             id: "oewn-abacus__1.06.00..",
                             synset_id: "oewn-02668826-n",
-                            senses_relations: [],
+                            sense_relations: [],
                             examples: [],
                         },
                     ],
@@ -433,7 +433,7 @@ fn t() {
                         Sense {
                             id: "oewn-abet__2.41.00..",
                             synset_id: "oewn-02554908-v",
-                            senses_relations: [
+                            sense_relations: [
                                 SenseRelation {
                                     rel_type: Derivation,
                                     target: "oewn-abetment__1.10.00..",
