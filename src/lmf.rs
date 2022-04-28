@@ -1,59 +1,59 @@
-pub type S = Box<str>;
+pub type BoxStr = Box<str>;
 
-pub type V<T> = Box<[T]>;
+pub type BoxSlice<T> = Box<[T]>;
 
 #[derive(Clone, Debug, PartialEq, serde::Deserialize)]
 pub struct Root {
     #[serde(rename = "Lexicon")]
-    pub lexicons: V<Lexicon>,
+    pub lexicons: BoxSlice<Lexicon>,
 }
 
 #[derive(Clone, Debug, PartialEq, serde::Deserialize)]
 pub struct Lexicon {
-    pub id: S,
-    pub label: S,
-    pub language: S,
-    pub email: S,
-    pub license: S,
-    pub version: S,
-    pub url: S,
+    pub id: BoxStr,
+    pub label: BoxStr,
+    pub language: BoxStr,
+    pub email: BoxStr,
+    pub license: BoxStr,
+    pub version: BoxStr,
+    pub url: BoxStr,
     #[serde(rename = "LexicalEntry")]
-    pub lexical_entries: V<LexicalEntry>,
+    pub lexical_entries: BoxSlice<LexicalEntry>,
     #[serde(rename = "Synset")]
-    pub synsets: V<Synset>,
+    pub synsets: BoxSlice<Synset>,
     #[serde(rename = "SyntacticBehaviour", default)]
-    pub syntactic_behaviours: V<SyntacticBehaviour>,
+    pub syntactic_behaviours: BoxSlice<SyntacticBehaviour>,
 }
 
 #[derive(Clone, Debug, PartialEq, serde::Deserialize)]
 pub struct LexicalEntry {
-    pub id: S,
-    pub status: Option<S>,
-    pub note: Option<S>,
+    pub id: BoxStr,
+    pub status: Option<BoxStr>,
+    pub note: Option<BoxStr>,
     #[serde(rename = "Lemma")]
     pub lemma: Lemma,
     #[serde(rename = "Form", default)]
-    pub forms: V<Form>,
+    pub forms: BoxSlice<Form>,
     #[serde(rename = "Sense")]
-    pub senses: V<Sense>,
+    pub senses: BoxSlice<Sense>,
     #[serde(rename = "SyntacticBehaviour", default)]
-    pub syntactic_behaviours: V<SyntacticBehaviour>,
+    pub syntactic_behaviours: BoxSlice<SyntacticBehaviour>,
 }
 
 #[derive(Clone, Debug, PartialEq, serde::Deserialize)]
 pub struct Lemma {
     #[serde(rename = "writtenForm")]
-    pub written_form: S,
+    pub written_form: BoxStr,
     #[serde(rename = "partOfSpeech")]
     pub part_of_speech: PartOfSpeech,
     #[serde(rename = "Pronunciation", default)]
-    pub pronunciations: V<Pronunciation>,
+    pub pronunciations: BoxSlice<Pronunciation>,
 }
 
 #[derive(Clone, Debug, PartialEq, serde::Deserialize)]
 pub struct Form {
     #[serde(rename = "writtenForm")]
-    pub written_form: S,
+    pub written_form: BoxStr,
 }
 
 #[derive(Clone, Debug, PartialEq, serde::Deserialize)]
@@ -80,29 +80,29 @@ pub enum PartOfSpeech {
 
 #[derive(Clone, Debug, PartialEq, serde::Deserialize)]
 pub struct Pronunciation {
-    pub variety: Option<S>,
-    pub notation: Option<S>,
-    pub audio: Option<S>,
+    pub variety: Option<BoxStr>,
+    pub notation: Option<BoxStr>,
+    pub audio: Option<BoxStr>,
     #[serde(rename = "$value")]
-    pub value: S,
+    pub value: BoxStr,
 }
 
 #[derive(Clone, Debug, PartialEq, serde::Deserialize)]
 pub struct Sense {
-    pub id: S,
+    pub id: BoxStr,
     #[serde(rename = "synset")]
-    pub synset_id: S,
+    pub synset_id: BoxStr,
     #[serde(rename = "SenseRelation", default)]
-    pub sense_relations: V<SenseRelation>,
+    pub sense_relations: BoxSlice<SenseRelation>,
     #[serde(rename = "Example", default)]
-    pub examples: V<S>,
+    pub examples: BoxSlice<BoxStr>,
 }
 
 #[derive(Clone, Debug, PartialEq, serde::Deserialize)]
 pub struct SenseRelation {
     #[serde(rename = "relType")]
     pub rel_type: SenseRelationType,
-    pub target: S,
+    pub target: BoxStr,
 }
 
 #[derive(Clone, Debug, PartialEq, serde::Deserialize)]
@@ -143,24 +143,24 @@ pub enum SenseRelationType {
 
 #[derive(Clone, Debug, PartialEq, serde::Deserialize)]
 pub struct Synset {
-    pub id: S,
+    pub id: BoxStr,
     #[serde(rename = "partOfSpeech")]
     pub part_of_speech: PartOfSpeech,
     #[serde(rename = "Definition")]
-    pub definitions: V<S>,
+    pub definitions: BoxSlice<BoxStr>,
     #[serde(rename = "ILIDefinition")]
-    pub ili_definition: Option<S>,
+    pub ili_definition: Option<BoxStr>,
     #[serde(rename = "Example", default)]
-    pub examples: V<S>,
+    pub examples: BoxSlice<BoxStr>,
     #[serde(rename = "SynsetRelation", default)]
-    pub relations: V<SynsetRelation>,
+    pub relations: BoxSlice<SynsetRelation>,
 }
 
 #[derive(Clone, Debug, PartialEq, serde::Deserialize)]
 pub struct SynsetRelation {
     #[serde(rename = "relType")]
     pub rel_type: SynsetRelationType,
-    pub target: S,
+    pub target: BoxStr,
 }
 
 #[derive(Clone, Debug, PartialEq, serde::Deserialize)]
@@ -257,9 +257,9 @@ pub enum SynsetRelationType {
 #[derive(Clone, Debug, PartialEq, serde::Deserialize)]
 pub struct SyntacticBehaviour {
     #[serde(rename = "subcategorizationFrame")]
-    pub subcategorization_frame: S,
+    pub subcategorization_frame: BoxStr,
     #[serde(default)]
-    pub senses: V<S>,
+    pub senses: BoxSlice<BoxStr>,
 }
 
 #[derive(Debug, thiserror::Error)]
